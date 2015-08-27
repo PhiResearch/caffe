@@ -545,7 +545,8 @@ class UnpoolingLayer : public Layer<Dtype> {
   // MAX POOL layers can output an extra top blob for the mask;
   // others can only output the pooled inputs.
   virtual inline int MaxTopBlobs() const {
-    return 1;
+    return (this->layer_param_.unpooling_param().unpool() ==
+            UnpoolingParameter_UnpoolMethod_MAX) ? 2 : 1;
   }
 
  protected:
