@@ -522,7 +522,7 @@ class CuDNNPoolingLayer : public PoolingLayer<Dtype> {
   cudnnPoolingMode_t        mode_;
 };
 #endif
-////////////
+/**
 
 /**
  * @brief Unpools the input image by taking the max, average, etc. within regions.
@@ -603,7 +603,7 @@ class CuDNNUnpoolingLayer : public UnpoolingLayer<Dtype> {
 };
 #endif
 
-///////
+/**
 
 /**
  * @brief Does spatial pyramid pooling on the input image
